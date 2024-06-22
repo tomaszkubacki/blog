@@ -55,5 +55,7 @@ or even better
 
 ### Copy between editor and terminal
 
-Use ctrl+
-
+If you coppied some text in different file into default register (e.g. by using yy coping line) then you can paste it into terminal by using 
+```
+ctrl+w ""
+```
