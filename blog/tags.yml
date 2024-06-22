@@ -1,0 +1,9 @@
+facebook:
+  label: Linux
+  permalink: /linux
+  description: Linux tag
+hello:
+  label: Tmux
+  permalink: /tmux
+  description: TMUX - terminal multiplexer
+
