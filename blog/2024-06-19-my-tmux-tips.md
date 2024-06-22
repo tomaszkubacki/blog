@@ -3,7 +3,7 @@ slug: my-tmux-tips
 title: Tmux tips
 authors:
   name: Tomasz Kubacki
-  title: Something to test
+  title: Random dev
   url: https://github.com/tomaszkubacki
   image_url: https://avatars.githubusercontent.com/u/348532?s=400&v=4
 tags: [tmux, linux]
