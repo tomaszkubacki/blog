@@ -37,7 +37,7 @@ const config: Config = {
                     routeBasePath: '/',
                     showReadingTime: true,
                     editUrl:
-                        'https://github.com/tomaszkubacki/blog/tree/main/blog',
+                        'https://github.com/tomaszkubacki/blog',
                 },
                 theme: {
                     customCss: './src/css/custom.css',
