@@ -11,12 +11,12 @@ tags: [tmux, linux]
 
 # Tmux - ultimate linux console multiplexer
 
-In this post I would like to show you the Tmux cli tool. Tmux is a terminal multiplexer allowing you to run your cli task in the background and use multiple terminals at once (hence the name multiplexer).
+In this post I would like to show you the *tmux* cli tool. [*tmux*](https://github.com/tmux/tmux) is a terminal multiplexer allowing you to run your cli task in the background and use multiple terminals at once (hence the name multiplexer).
 
 I will show you the value of Tmux by showing a couple of usecases. But before we start you need to know how to invoke Tmux commands.
 
 ### how to open tmux
-First you need to open Tmux which is as easy (assuming you installed it) as typing
+First you need to open Tmux which is as easy (assuming you installed it with e.g.) as typing
 
 ```shell
 tmux
@@ -34,7 +34,7 @@ ctrl+b d
 so you press *ctrl*, then (still holding ctrl) *b*, then release them both and finally  press *d* (in general plus sign in notation means you hold keys together while space means you unhold previous sequence)
 
 
-## Case 1 - run task in the background
+## Run task in the background
 
 In this case we will open Tmux, run some task, then detach from Tmux and attach again, kill command and finally exit for good.
 
@@ -87,9 +87,45 @@ To exit just press type
 ```text
 exit
 ```
-or press *ctrl + d*
+or press 
+```
+ctrl + d
+```
+
+### Split tmux window horizontally and verticaly to have two terminal visible at once
+
+Splitting terminal window is usefull 
+
+To split window horizontally type
+
+```
+ctrl+b "
+```
+when splitting verticaly do
+```
+ctrl+b %
+```
+Now to move between splitted windows use
+
+```
+ctrl+b [left/right/up/down arrow]
+```
+
+Let's assume you want to zoom in into one specific window:
+
+```
+ctrl+b z
+```
+Use the same command to unzoom.
 
 
-### Case 2 - split tmux window horizontally and verticaly to have two terminal visible at once
+### There is one mode thing
 
-*TODO*
+Another cool gadged is to display clock in current window
+
+```
+ctrl+b t
+```
+
+
+
