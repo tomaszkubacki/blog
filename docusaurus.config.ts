@@ -37,7 +37,7 @@ const config: Config = {
                     routeBasePath: '/',
                     showReadingTime: true,
                     editUrl:
-                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+                        'https://github.com/tomaszkubacki/blog/tree/main/blog',
                 },
                 theme: {
                     customCss: './src/css/custom.css',
