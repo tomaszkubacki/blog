@@ -74,11 +74,6 @@ const config: Config = {
                 {
                     title: 'Community',
                     items: [
-
-                        {
-                            label: 'Twitter',
-                            to: 'https://twitter.com/tomaszkubacki',
-                        },
                     ],
                 },
                 {
@@ -88,10 +83,7 @@ const config: Config = {
                             label: 'Blog',
                             to: '/blog',
                         },
-                        {
-                            label: 'Twitter',
-                            to: 'https://twitter.com/tomaszkubacki',
-                        },
+                       
                     ],
                 },
             ],
