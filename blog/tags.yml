@@ -1,8 +1,24 @@
-facebook:
+linux:
   label: Linux
   permalink: /linux
-  description: Linux tag
-hello:
+  description: Linux operating system
+vim:
+  label: Vim
+  permalink: /vim
+  description: Vim editor
+tmux:
   label: Tmux
   permalink: /tmux
   description: TMUX - terminal multiplexer
+java:
+  label: Java
+  permalink: /java
+  description: Java
+kafka:
+  label: Kafka
+  permalink: /kafka
+  description: Apache Kafka
+rust:
+  label: Rust
+  permalink: /rust
+  description: Rust lang
