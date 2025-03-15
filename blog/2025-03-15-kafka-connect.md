@@ -14,14 +14,29 @@ In this post I would like to show how to stream data from any topic to relationa
 
 ## What is Kafka Connect
 
-In Short Kafka Connect is a framework facilitating streaming integrations beetwen Kafka and other systems.
-You can lear more about it [here](https://developer.confluent.io/courses/kafka-connect/intro/).
+In short Kafka Connect is a framework facilitating streaming integrations beetwen Kafka and other systems.
+You can learn more about it [here](https://developer.confluent.io/courses/kafka-connect/intro/).
 
-There are number of abstractions provided by the framework
+There are two types of Kafka Conect workflows. One is *Source* to Kafka.
+
+```mermaid
+    graph LR;
+    Source --> kc["Kafka Connect"] --> Kafka
+```
+and the other on Kafka to *Sink*
+```mermaid
+    graph LR;
+    Kafka --> kc["Kafka Connect"] --> Sink
+```
+where *Source* and *Sink* are kind of abstractions representing any external system like MongoDb, FTP, File or any relational database like PostgreSql, Oracle or Sql Server.
 
 
-Source -> Kafka Connect -> Kafka
+## Kafka Connect Plugins
 
-Kafka -> Kafka Connect -> Sink
+
+## How it works
+
+
+https://github.com/tomaszkubacki/kafka_connect_demo/blob/master/kafka_to_postgresql/kafka_to_postgres.md
 
 
