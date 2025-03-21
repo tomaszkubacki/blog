@@ -44,13 +44,12 @@ The problem is we often lack schema or even worse: schema of the message is so c
 
 ## The Solution
 
-Fortunetaly modern RDBM's allow query json put in a single field, so the idea here is to simply wrap 
+Fortunately modern RDBM's allow query json put in a single field, so the idea here is to simply wrap 
 
 ```mermaid
     graph LR;
     Kafka --> conv["SimpleWrappingConverter"] --> tr["AddMetadataTransformer"] --> PostgreSQL
 ```
-
 
 
 https://github.com/tomaszkubacki/kafka_connect_demo/blob/master/kafka_to_postgresql/kafka_to_postgres.md
