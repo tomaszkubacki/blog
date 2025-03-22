@@ -20,12 +20,12 @@ You can learn more about it [here](https://developer.confluent.io/courses/kafka-
 There are two types of Kafka Connect workflows. One is *Source* to Kafka.
 
 ```mermaid
-    graph LR;
+    flowchart LR;
     Source --> kc["Kafka Connect"] --> Kafka
 ```
 and the other on Kafka to *Sink*
 ```mermaid
-    graph LR;
+    flowchart LR;
     Kafka --> kc["Kafka Connect"] --> Sink
 ```
 where *Source* and *Sink* are  abstractions representing any external system like MongoDb, FTP, File, relational database e.g. PostgreSql, Oracle or Sql Server or even another kafka cluster.
@@ -36,20 +36,20 @@ Processing is organized in *tasks*, which could be registered and managed using 
 
 ## Kafka Connect message formats and schema
 
-Kafka itself has no knownlege regarding message payload. For the broker message is just a byte array, however Kafka Connect needs to know message format and schema in order to perform data manipulations using transformers or pour message into sink in a structurized way.
+Kafka itself has no knownlege regarding message payload. For the broker message is just a byte array, however Kafka Connect needs to know message format and schema (in most cases)  to perform data manipulations using transformers or pour message into sink in a structurized way.
 
 ## The Problem
 
 Confluent Kafka JdbcSinkConnector which I will be using requires that the incoming message schema is known, to be able map between message fields and sql columns.
 
-The problem is we often lack schema or even worse, schema of the message is so complicated it's impossible to map it into flat column based sql table.
+The problem we often face, is lack of schema or even worse, message schema is so complicated it's impossible to map it into flat column based sql table. E.g. for jsons with nested arrays it's impossible to map it to columns if the array size is unknown.
 
 ## The Solution
 
-Fortunately modern RDBM's allow query json put in a single field, so the idea here is to simply wrap the message with single field envelope
+Fortunately modern RDBM's allow query json put in a single field, so the idea here is to simply wrap the message with a single field envelope
 
 ```mermaid
-    graph LR;
+    flowchart LR;
     Kafka --> conv["SimpleWrappingConverter"] --> tr["AddMetadataTransformer"] --> PostgreSQL
 ```
 
