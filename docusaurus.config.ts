@@ -70,26 +70,32 @@ const config: Config = {
                     title: 'Docs',
                     items: [
                         {
-                            label: 'Notes',
-                            to: '/docs/intro',
-                        },
-                    ],
-                },
-                {
-                    title: 'Community',
-                    items: [
-                    ],
-                },
-                {
-                    title: 'More',
-                    items: [
-                        {
                             label: 'Blog',
                             to: '/blog',
                         },
-                       
                     ],
                 },
+                {
+                    title: 'Author',
+                    items: [
+                        {
+                            label: 'Github',
+                            href: 'https://github.com/tomaszkubacki'
+                        },
+
+                    ]
+                },
+                {
+                    title: 'Social',
+                    items: [
+                        {
+                            label: 'Mastodon',
+                            href: 'https://mastodon.social/@j23tom'
+                        },
+
+                    ]
+                }
+
             ],
             copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
         },

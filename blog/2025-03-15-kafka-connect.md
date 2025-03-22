@@ -32,17 +32,21 @@ where *Source* and *Sink* are  abstractions representing any external system lik
 
 Additionally Kafka Connect allows making data manipulations in beetwen source and sink using so called Single Message Transformers (SMT). Transformers are functions registered for any given processing task invoked on each message. You can use built in transformers, but you can also provide your own shipped as a JVM jar bundle.
 
-Processing is organized in *tasks*, which could be registered and managed using REST api (e.g. add, remove, stop resume, delete).
+### Kafka Connect task
+
+Connect processing is organized in *tasks*, which could be registered and managed using REST api (e.g. add, remove, stop resume, delete).
+
+Task configuration allows specify main 
 
 ## Kafka Connect message formats and schema
 
-Kafka itself has no knownlege regarding message payload. For the broker message is just a byte array, however Kafka Connect needs to know message format and schema (in most cases)  to perform data manipulations using transformers or pour message into sink in a structurized way.
+Kafka itself has no knownlege regarding message payload. For the broker message is just a byte array, however Kafka Connect needs to know message format and schema (in most cases) to perform data manipulations using transformers or pour message into sink in a structurized way.
 
 ## The Problem
 
-Confluent Kafka JdbcSinkConnector which I will be using requires that the incoming message schema is known, to be able map between message fields and sql columns.
+Confluent Kafka JdbcSinkConnector which I will be using requires that the incoming message schema is known, to be able to map between message fields and sql columns.
 
-The problem we often face, is lack of schema or even worse, message schema is so complicated it's impossible to map it into flat column based sql table. E.g. for jsons with nested arrays it's impossible to map it to columns if the array size is unknown.
+The problem we often face, is lack of schema or even worse, message schema is so complicated it's impossible to map it into flat column based sql table. E.g. for json with nested arrays it's impossible to map it to column, if the array size is unknown.
 
 ## The Solution
 
