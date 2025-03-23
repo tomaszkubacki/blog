@@ -1,7 +1,6 @@
 ---
 slug: kafka-connect
 title: stream data from kafka to relational database
-draft: true
 authors: tkub
 tags: [java, kafka]
 ---
