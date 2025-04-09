@@ -7,15 +7,15 @@ tags: [linux]
 
 # How to help automate Sway window manager with help of *just* commnd runner
 
-In this post I will show how to automate common Sway commands with the [*just*](https://just.systems/man/en/) command runner.
+In this post I will show how to automate common Sway (or any desktop) commands with the [*just*](https://just.systems/man/en/) command runner.
 
 <!-- truncate -->
 
 ## The problem and the solution
 
-I like cli tools. Well that's an understatement. I love them. The problem is you must remember a lot of them, to increase productivity working on your daily tasks. What is even worse, some of them have hard to remember syntax and some are not used often enough to remember this syntax (also: it's not helping that human brain is harder to train as it's getting older).
+I like cli tools. Well that's an understatement. I love them. The problem is you need to remember a lot of commands - with sometime bizarre and hard to remember syntax - to increase your productivity while working on daily tasks. What is even worse, some of useful commands are not used often enough to remember them easily (also: it's not helping that human brain is harder to train as it's getting older).
 
-Sway window manager main settings command is no exception here, but we can easy tackle this with the *just* command runner to shorten common commands.
+Sway window manager main settings command is no exception here, but we can tackle this with the *just* command runner. It helps shorten common commands and adds command description.
 
 
 ## What is Sway ?
@@ -30,7 +30,7 @@ Sway is a special kind of keyboard oriented window manager using idea of tiles i
 ## What is *just* ?
 
 Just is a conveniet and lightweight way (written in rustlang) to run project specific commands without creating custom bash scripts. It has [make](https://www.gnu.org/software/make/manual/make.html#Simple-Makefile) like syntax, 
-but scripts could be written in any lang. Additionally it read variables from .env files and many more features which of it's best to read int the [just book](https://github.com/casey/just).
+but scripts could be written in any lang. Additionally it can read variables from .env files and has many more features. You can read about them in the [just book](https://github.com/casey/just).
 
 ## How to use just
 
@@ -74,16 +74,16 @@ Available recipes:
 
 Ok assuming you know some *just* basics you are ready to write your own justfile. I do reccomend to write it directly into your user home dir.
 
-after you fill it with your commands it will be as easy as writing
+after filling *justfile*  with your commands, it will be as easy as writing
 
 ```shell
 just your_command
 ```
 
-to invoke your command (which is maybe multiline script).
+to invoke any command (which is maybe a multiline script).
 
 
-Now let's see my just commands
+Now let's see my *just* commands
 
 ```shell
 just
@@ -104,8 +104,10 @@ Available recipes:
     laptop               # disable all display outputs except main laptop display
     night                # dim display for night view
     not_laptop           # disable laptop display outputs and enable external displays
-    showkeys             # show typed keys
+    showkeys             # show typed keys on the screen
 ```
+
+As you can see my main use of *just* commands is display output and dim management.
 
 and the source code
 
@@ -190,13 +192,11 @@ evening:
 day:
    light -S 25
 
-#show typed keys
+#show typed keys on the screen
 showkeys:
    wshowkeys -a bottom
 
 ```
-
-
 
 ## Closing remarks
 
