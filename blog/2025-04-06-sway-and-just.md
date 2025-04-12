@@ -105,7 +105,7 @@ Available recipes:
 
 As you can see my main use of *just* commands is display output and dim management.
 
-Very common and atomic commands are deserving their own key binding (can be defined in ~/.config/sway/config), wherease *just* useage is fitting more for less frequent or compound commands. 
+Very common and atomic commands are deserving their own key binding (can be defined in ~/.config/sway/config), wherease *just* usage is fitting more for less frequent or compound commands. 
 
 I keep my [*justfile*](https://github.com/tomaszkubacki/configs/blob/main/justfile) source code in my github config repo,
 Currenlty it looks like this:
@@ -199,5 +199,5 @@ showkeys:
 
 ## Closing remarks
 
-The thing is you don't need to be linux freak to use *just*. You may use it to manage your mainstream operating system as well (including the evil/spying one). You can automate common operations like backups, remote server commands (as long as they're easy enough to not use proper management tool like *Ansible* or *Chef*) and also for changing your enviroment for certain work modes, e.g. I am using project specific *just dev* command to start all required docker machines, while working on certain group of projects.
+The thing is you don't need to be linux freak to use *just*. You may use it to manage your mainstream operating system as well (including the evil/spying one). You can automate common operations like backups, remote server commands (as long as they're easy enough to not use proper management tool like *Ansible* or *Chef*) and also for changing your enviroment for certain work modes, e.g. I am using project specific *just dev* command to start all required docker containers, while working on certain group of projects.
 
