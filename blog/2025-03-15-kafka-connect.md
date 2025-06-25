@@ -50,7 +50,7 @@ The problem we often face, is lack of schema or even worse, message schema is so
 
 ## The Solution
 
-Fortunately modern RDBM's allow query json put in a single column, so the idea here is to simply wrap the message content in a field envelope, so it can be stored by JdbcSinkConnector in the sql column.
+Fortunately modern RDBM's (like PostgreSQL) allow query json stored in a single column, so the idea is to wrap the message content in a field envelope, which can be stored (by JdbcSinkConnector) in the sql column.
 
 To make it work we need to declare custom value converter, class implementing interfece allowing convert data from byte array into connect internal data structure witch schema. Let's call it *SimpleWrappingConverter* for which code you can find [here](https://github.com/tomaszkubacki/schema_wrapping/blob/main/src/main/java/net/tk/kafka/connect/converter/SimpleSchemaWrappingConverter.java)
 
